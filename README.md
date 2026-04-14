@@ -10,7 +10,7 @@ A modular, replicable framework for jointly modelling the **type** and **floorsp
 
 ## Overview
 
-This repository implements the **High Data Quality (Version 2)** of the conceptual framework described in the associated paper. Unlike the companion [Version 1 (Low Data Quality)](https://[github.com/zha12097/Chapter5-Supplymentary-Files.git](https://github.com/zha12097/Parcel-Level-LU-Microsimulation-Framework-Version-1) repository, which models only the discrete choice of "what type to build," this version tackles the full **joint discrete-continuous choice (DCC) problem**: simultaneously determining the **building type** (Retail, Industrial, Office, Mixed) and the **floorspace quantity** (continuous, in sqft).
+This repository implements the **High Data Quality (Version 2)** of the conceptual framework described in the associated paper. Unlike the companion [Version 1 (Low Data Quality)](https://[github.com/zha12097/Parcel-Level-LU-Microsimulation-Framework-Version-1]) repository, which models only the discrete choice of "what type to build," this version tackles the full **joint discrete-continuous choice (DCC) problem**: simultaneously determining the **building type** (Retail, Industrial, Office, Mixed) and the **floorspace quantity** (continuous, in sqft).
 
 ### What Makes Version 2 Different from Version 1?
 
