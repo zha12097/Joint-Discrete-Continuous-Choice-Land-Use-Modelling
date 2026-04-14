@@ -3,14 +3,14 @@
 # ==============================================================================
 
 study_area:
-  name: "GTHA"
-  crs: "EPSG:26917"
+  name: "GTHA"        # Update whenever needed
+  crs: "EPSG:26917"   # Update whenever needed
 
 temporal:
-  start_year: 2015
-  end_year: 2023
-  lag_initialization_years: 2
-  interval: "annual"
+  start_year: 2015    # Update whenever needed
+  end_year: 2023      # Update whenever needed
+  lag_initialization_years: 2  # Update whenever needed
+  interval: "annual"  # Update whenever needed
 
 # --- Choice Set (Version 2: no "No Development" — handled by Tier 1) --------
 choice_set:
