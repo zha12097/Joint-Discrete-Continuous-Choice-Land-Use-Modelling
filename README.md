@@ -2,7 +2,7 @@
 
 A modular, replicable framework for jointly modelling the **type** and **floorspace** of commercial land use supply at the **parcel level** in large metropolitan regions. Developed and validated in Canada's Greater Toronto and Hamilton Area (GTHA), but designed for transferability to any jurisdiction with formal zoning systems.
 
-> **Paper citation:** Zhang, J., Kiko, M., Miller, E.J. *Rethinking the Discrete-Continuous Choice Problem by Uncovering Asymmetry in High-Resolution Urban Modelling.* Submitted to *Geographical Analysis*.
+> **Paper citation:** Zhang, J., Miller, E.J. *Rethinking the Discrete-Continuous Choice Problem by Uncovering Asymmetry in High-Resolution Urban Modelling.* Submitted to *Geographical Analysis*.
 >
 > **Thesis citation:** Zhang, J. (2026). *Decoding Urban Evolution: A Parcel-Level Blueprint for the ILUTE 2.0 Land Use Module.* Doctoral thesis, University of Toronto. ProQuest Dissertations Publishing.
 
