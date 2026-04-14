@@ -1,0 +1,87 @@
+# ==============================================================================
+# Configuration Template — High Data Quality (Version 2)
+# ==============================================================================
+
+study_area:
+  name: "GTHA"
+  crs: "EPSG:26917"
+
+temporal:
+  start_year: 2015
+  end_year: 2023
+  lag_initialization_years: 2
+  interval: "annual"
+
+# --- Choice Set (Version 2: no "No Development" — handled by Tier 1) --------
+choice_set:
+  alternatives:
+    - "Retail"
+    - "Industrial"
+    - "Office"
+    - "A_Mixed"
+  base_alternative: "A_Mixed"           # Default reference; rotated for robustness
+  base_rotation: true                   # Estimate with each alternative as reference
+
+# --- Spatial Resolution & Buffers --------------------------------------------
+spatial:
+  fundamental_unit: "parcel"
+  buffer_distances_m: [100, 1000]
+  default_buffer_m: 1000
+
+# --- File Paths (user must populate) ----------------------------------------
+paths:
+  parcels_shapefile: "data/raw/parcels.shp"
+  buildings_csv: "data/raw/buildings_with_floorspace.csv"  # Must include floorspace field
+  zoning_shapefile: "data/raw/zoning_bylaws.shp"
+  market_data_csv: "data/raw/market_indicators.csv"
+  poi_shapefile: "data/raw/points_of_interest.shp"
+  transport_network: "data/raw/transport/"
+  census_csv: "data/raw/census_variables.csv"
+  satellite_imagery_dir: "data/raw/satellite/"
+  tier1_probabilities: "data/intermediate/tier1_develop_probabilities.csv"
+  parcel_centroids: "data/parcel_centroids/parcel_centroids.shp"
+
+  intermediate_dir: "data/intermediate/"
+  output_dir: "data/output/"
+  model_input: "data/output/InputData_1Y_2015To2023_withCDNames.csv"
+  prob_reference: "data/output/Parcel_ID_Prob_Reference.csv"
+
+# --- Tier 1: Binary Develop/Not-Develop Classifier --------------------------
+tier1:
+  model_type: "XGBoost"
+  monte_carlo_runs: 30
+  test_size: 0.20
+  val_size: 0.15
+  xgboost:
+    n_estimators: 4000
+    learning_rate: 0.03
+    max_depth: 3
+    early_stopping_rounds: 50
+
+# --- Core Model: 4-Stage MNL+OLS (Stage 8) ----------------------------------
+core_model:
+  stage1:
+    type: "MNL"
+    halton_draws: 50
+    panel: false
+  stage2:
+    type: "choice_probabilities"        # Computed from Stage 1 fitted model
+  stage3:
+    type: "OLS"                         # Per-type floorspace regression with bias factor
+    selectivity_bias_correction: true   # Berkowitz et al. (1990) E_k term
+  stage4:
+    type: "MNL"                         # Final MNL with predicted floorspace
+    floorspace_parameter: "alternative_specific"  # NOT generic
+
+# --- Spatial Autocorrelation (Stage 9) ---------------------------------------
+spatial_autocorrelation:
+  distance_band_km: 10
+  permutations: 999
+  significance_threshold: 0.05
+
+# --- Validation (Stage 10) --------------------------------------------------
+validation:
+  mcfadden_r2_threshold: 0.20
+  simulation_type: "monte_carlo"
+  n_simulations: 100
+  comparison_levels: ["region", "municipality", "market", "year"]
