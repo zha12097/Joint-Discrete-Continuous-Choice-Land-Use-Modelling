@@ -1,0 +1,38 @@
+# ==============================================================================
+# Dependencies — Version 2 (High Data Quality)
+# ==============================================================================
+
+# --- Python (for GIS processing, ML, data wrangling, visualisation) ----------
+geopandas>=0.14
+pandas>=2.0
+numpy>=1.24
+scipy>=1.11
+shapely>=2.0
+scikit-learn>=1.3
+xgboost>=2.0              # Tier 1: binary develop/not-develop classifier
+matplotlib>=3.8
+seaborn>=0.13             # Alternative-specific analysis heatmaps
+pyyaml>=6.0
+
+# --- R (for econometric estimation + spatial diagnostics) --------------------
+# Stage 8 requires:
+#   mlogit   >= 1.1       # MNL estimation
+#   dfidx                 # Data indexing for mlogit
+#   dplyr, tidyr, readr   # Data manipulation
+#   ggplot2               # Validation plots
+#   tibble, purrr         # Functional helpers
+#   scales                # Axis formatting
+#
+# Stage 9 requires:
+#   sf       >= 1.0       # Spatial data handling
+#   spdep    >= 1.2       # Moran's I spatial autocorrelation
+#   dplyr, readr
+#
+# Install in R:
+#   install.packages(c("mlogit", "dfidx", "tidyverse", "sf", "spdep", "scales"))
+
+# --- GIS Software (for spatial data preparation) -----------------------------
+# Any of the following:
+#   ArcGIS Pro >= 3.0     # Used in the GTHA case study
+#   QGIS >= 3.30          # Open-source alternative
+#   PostGIS               # Database-backed spatial operations
