@@ -24,9 +24,9 @@ choice_set:
 
 # --- Spatial Resolution & Buffers --------------------------------------------
 spatial:
-  fundamental_unit: "parcel"
-  buffer_distances_m: [100, 1000]
-  default_buffer_m: 1000
+  fundamental_unit: "parcel"            # Update whenever neede
+  buffer_distances_m: [100, 1000]       # Update whenever needed
+  default_buffer_m: 1000                # Update whenever needed
 
 # --- File Paths (user must populate) ----------------------------------------
 paths:
