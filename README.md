@@ -1,6 +1,6 @@
 # Parcel-Level Land Use Supply Microsimulation Framework (High Data Quality Version)
 
-A modular, replicable framework for jointly modelling the **type** and **floorspace** of commercial land use supply at the **parcel level** in large metropolitan regions. Developed and validated in Canada's Greater Toronto and Hamilton Area (GTHA), but designed for transferability to any jurisdiction with formal zoning systems.
+A modular, replicable framework for jointly modelling the **type** and **floorspace** of commercial land use supply at the parcel level in large metropolitan regions. Developed and validated in Canada's Greater Toronto and Hamilton Area (GTHA), but designed for transferability to any jurisdiction with formal zoning systems.
 
 > **Paper citation:** Zhang, J., Miller, E.J. *Rethinking the Discrete-Continuous Choice Problem by Uncovering Asymmetry in High-Resolution Urban Modelling.* Submitted to *Geographical Analysis*.
 >
