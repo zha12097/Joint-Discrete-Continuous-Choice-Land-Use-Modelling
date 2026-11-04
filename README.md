@@ -10,7 +10,7 @@ Code and data for:
 |---|---|
 | `development_probability.csv` | Tier 1 (XGBoost) development probability per parcel-year: `GTHA_ID`, `Year`, `proba_yearly` |
 | `parcel_centroids/` | Parcel centroid shapefile (`GTHA_ID`) used for the spatial autocorrelation tests |
-| `model_input_example.csv` | **Synthetic** example showing the format of the model input (parcel-year, 2015–2023). `GTHA_ID`, `Year`, year dummies, `CPI`, `CDNAME`, `CSDNAME`, `POPDEN2021` and `income_noLow_per` come from public sources; the other columns are randomly generated, and parcel-years are drawn at random. Columns derived from CoStar data (development outcomes, floorspace, market conditions, market areas and distances to commercial clusters) are omitted. The full data may be requested from the authors, but access depends on the data provider's approval and cannot be guaranteed. |
+| `model_input_example.csv` | **Synthetic** example showing the format of the model input (parcel-year, 2015–2023). `GTHA_ID`, `Year`, year dummies, `CPI`, `CDNAME`, `CSDNAME`, `POPDEN2021` and `income_noLow_per` come from public sources; the other columns are randomly generated, and parcel-years are drawn at random. Columns derived from CoStar data (development outcomes, floorspace, market conditions, market areas and distances to commercial clusters) are omitted. The full data may be requested from the authors, but access depends on the data provider's approval. |
 
 ## Scripts (`scripts/`)
 
