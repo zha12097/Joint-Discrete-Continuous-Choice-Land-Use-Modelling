@@ -21,7 +21,6 @@ Code and data for:
 | `R/main_model_and_simulation.R` | Main multi-stage MNL–OLS model and Monte Carlo simulation of development outcomes |
 | `R/VIF_stage2_OLS.R` | Multicollinearity (VIF) checks for the floorspace regressions |
 | `R/spatial_autocorrelation_tests.R` | Moran's I tests on the OLS and MNL residuals |
-| `R/zoning_split_and_bootstrap.R` | Zoning-group diagnostics and cluster bootstrap standard errors |
 | `python/fig8_coefficient_heatmap.py` | Heatmap of coefficients across base alternatives |
 | `python/fig9_coefficient_dotplot.py` | Dot plot of coefficients across base alternatives |
 | `python/figA3_annual_temporal_indicators.py` | Heatmap of annual year-dummy coefficients across base alternatives |
